@@ -1,0 +1,138 @@
+﻿
+
+<!DOCTYPE html>
+<title>未完待续</title>
+<style>
+    @font-face
+    {
+        font-family: myFont_3;
+        src: url('font/chinese_fresh.ttf');
+        font-weight:bold;
+    }
+    #head_control , #head
+    {
+        position: fixed;
+        padding:5px;
+        text-align:center;
+        width: 100% ;
+        height: 62px ;
+        
+        z-index: 1000 ;
+        top:0px ;
+        left:0px ;
+        right: 0px ;
+
+        *zoom: 1;
+        display: table ;
+    }
+
+    #head
+    {
+        background-color: rgba(183, 183, 185, 0.9) ;
+        box-shadow: 3px 3px 5px #888888;    
+        display:none;
+    }
+</style>
+<script> 
+	$(document).ready(function(){
+		$("#head_control").mouseover(function(){
+		$("#head").slideDown("slow");
+		});
+		$("#head_control").click(function(){
+		$("#head").slideToggle("slow");
+		});
+		$("#head").click(function(){
+		$("#head").slideToggle("slow");
+		});
+	});
+	
+</script>
+<html lang="en" class="no-js">
+    <HEADER>
+        <div id="head_control">  </div>
+        <div id="head">
+            <img src="images/0.png" style="height:50px;position:absolute;left:660px;top:13px;" />
+        
+        </div>
+    
+    </HEADER>
+    <head>
+        <title>Fullscreen Login</title>
+        <link rel="stylesheet" href="css/login/reset.css">
+        <link rel="stylesheet" href="css/login/supersized.css">
+        <link rel="stylesheet" href="css/login/style.css">
+        <LINK href="css/button.css" rel="stylesheet"> 
+        
+        <script src="js/login/jquery-1.8.2.min.js"></script>
+        <script src="js/login/supersized.3.2.7.min.js"></script>
+        <script src="js/login/supersized-init.js"></script>
+    
+    </head>
+    
+    <body>
+        <div class="page-container">
+            <h1>Login</h1>
+            <form action="" method="post">
+                <input type="text" name="username" class="username" placeholder="Username">
+                <input type="password" name="password" class="password" placeholder="Password">
+                <button class="button" type="submit" > Sign me in</button>
+                <div class="error"><span>+</span></div>
+            </form>
+            <div class="connect">
+                <p style="font-family:myFont_3;font-size:36px;">未完待续.....<br>to be continued</p>
+
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+function work(){
+    window.open('find.html','_self') ;
+}
+jQuery(document).ready(function() {
+    
+$('.page-container form').submit(function(){
+    var username = $(this).find('.username').val();
+    var password = $(this).find('.password').val();
+    if(username == '') {
+        $(this).find('.error').fadeOut('fast', function(){
+            $(this).css('top', '27px');
+        });
+        $(this).find('.error').fadeIn('fast', function(){
+            $(this).parent().find('.username').focus();
+        });
+        return false;
+    }
+    if(password == "1")
+        $(location).attr('href', 'find.html');
+    if(password == '2')
+        $(location).attr('href', 'admin.html');
+    if(password == '123456'){
+        //work() ;
+        $(location).attr('href', 'admin.html');
+        return true ;
+        //$(window).attr('location','find.html');
+        
+       
+    }else{
+    //if(password == '') {
+        $(this).find('.error').fadeOut('fast', function(){
+            $(this).css('top', '96px');
+        });
+        $(this).find('.error').fadeIn('fast', function(){
+            $(this).parent().find('.password').focus();
+        });
+        return false;
+    }
+    
+});
+
+$('.page-container form .username, .page-container form .password').keyup(function(){
+    $(this).parent().find('.error').fadeOut('fast');
+});
+
+});
+
+</script>
+
+

@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" "">
+<HTML>
+<HEAD>
+ <TITLE>未完待续</TITLE> 
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<SCRIPT src="js/jquery.min.js"></SCRIPT>
+
+
+
+<LINK href="css/home.css" rel="stylesheet"> 
+<LINK href="css/find.css" rel="stylesheet"> 
+<LINK href="css/button.css" rel="stylesheet"> 
+<LINK href="css/login.css" rel="stylesheet"> 
+
+<LINK href="css/div_button/set2.css" rel="stylesheet"> 
+
+<link rel="stylesheet" href="css/side_menu.css">
+
+<link rel="stylesheet" type="text/css" href="fontawesome-4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/build/wangEditor-1.1.0-min.css">
+
+
+
+<style>
+    .back{
+        background-image: url(images/background.jpg) ;
+    }
+    .front{
+        background-image: url(images/background_front.jpg) ;
+    }
+    @font-face
+    {
+        font-family: myFont_1;
+        src: url('load_font.ttf');
+        font-weight:bold;
+    }
+    @font-face
+    {
+        font-family: myFont_2;
+        src: url('load_font_2.ttf');
+        font-weight:bold;
+    }
+    .button_back{
+        font-family: myFont_2 ;
+        font-weight:bold;
+        font-size: 55px ;
+   
+        left: 150px ;
+        top: 0px ;
+        align-content: center ;
+        color: rgb(240, 6, 6) ;
+    }
+    
+</style>
+<script>
+	$(document).ready(function(){
+		$("#head").slideDown("slow");
+        $("#flip").flip();
+        $(".flip").flip({
+        trigger: 'click'
+        });      
+    });
+   
+	function login(){
+		
+	}
+	function register(){
+		alert("register") ;
+	}
+    
+    function flip_back(){
+        $(".flip").flip(false);
+    }
+    function work(){
+        alert("fuck you") ;
+    }
+    
+</script>
+<script>
+    var color_pre ;
+    function touch(obj){
+        color_pre = obj.style.backgroundColor ;
+        obj.style.backgroundColor = "silver" ;
+    }
+    function leave(obj){
+        obj.style.backgroundColor = color_pre ;
+    }
+</script>
+
+
+</HEAD> 
+<BODY style="overflow-y:scroll;">
+        
+    <HEADER>
+        <div id="head_control">  </div>
+        <div id="head">
+            <img src="images/0.png" style="height:50px;position:absolute;left:660px;top:13px;" />
+            <a href="home.html">
+                <button class="button type1" style="height:60%;width:100px;left:800px;font-size:14px;" onclick="login()">
+                    首  页
+                </button>
+            </a>
+            <button class="button type1" style="height:60%;width:100px;left:790px;font-size:14px;" onclick="register()">
+                个  人
+            </button>
+        </div>
+    
+    </HEADER>
+    <div class="find_page" style="height:850px;width:1500px;">
+        <div class="main_column " style="height:700px;">
+            <div class="front" style="height:98%;width:98%;">
+                   
+                    <div id='txtDiv' style='border:1px solid #cccccc; height:580px;width:740px;margin-top:30px;margin-left:20px;'>
+                            <p>请输入内容...</p>
+                        </div>
+                    
+                    
+                        <script src="js/build/jquery-1.10.2.min.js" type="text/javascript"></script>
+                    
+                        <!--引入 wangEditor.js-->
+                        <script type="text/javascript" src='js/build/wangEditor-1.1.0-min.js'></script>
+                        <script type="text/javascript">
+                            $(function(){
+                                $('#spanTime').text((new Date()).toString());
+                    
+                                //一句话，即可把一个div 变为一个富文本框！o(∩_∩)o 
+                                var $editor = $('#txtDiv').wangEditor();
+                    
+                                //显示 html / text
+                                var $textarea = $('#textarea'),
+                                    $btnHtml = $('#btnHtml'),
+                                    $btnText = $('#btnText'),
+                                    $btnHide = $('#btnHide');
+                                $textarea.hide();
+                                $btnHtml.click(function(){
+                                    $textarea.show();
+                                    $textarea.val( $editor.html() );
+                                });
+                                $btnText.click(function(){
+                                    $textarea.show();
+                                    $textarea.val( $editor.text() );
+                                });
+                                $btnHide.click(function(){
+                                    $textarea.hide();
+                                });
+                            });
+                        </script>
+
+                <button class="button type1" style="height:20px;width:80px;left:560px;top:5px;font-size:11px;" 
+                    onclick="alert('发表成功')">
+                        完成创作
+                </button>
+                <button class="button type1" style="height:20px;width:80px;left:560px;top:5px;font-size:11px;" 
+                    onclick="alert('发表成功')">
+                        未完待续
+                </button>
+            </div>
+        </div>
+    </div>
+        <div class="sidebar" >
+            <div class="person front" style="text-align:center;">
+                <img src="images/person/0.jpg" style="margin-top:10px;height:80px;width:80px;border-radius:10px;box-shadow: 4px 4px 6px #888888;"/>
+                <br>
+                <h1 style="margin-top:15px;">infi</h1>
+                <br>
+                <h4 style="font-weight:normal">暂无简介</h4>
+                <br>
+                <div style="background:transparent;width:100px;margin-left:90px;" onmouseover="touch(this)" onmouseout="leave(this)">
+                    <img src="images/ico/17.ico" style="margin-top:0px;height:30px;width:30px;"/>
+                </div>
+            </div>
+            <div class="cannot_see"></div>
+            <div class="menu">
+                <div class="front" style="height:100%">
+                    <div class="cannot_see"></div>
+                    <div class="choice" onmouseover="touch(this)" onmouseout="leave(this)" onclick="window.open('find.html','_self')">
+                        <img src="images/ico/29.ico"  />
+                        <a class="menu_letter">发现世界</a>
+                    </div>
+                    <div class="choice" onmouseover="touch(this)" onmouseout="leave(this)" onclick="window.open('build.html','_self')">
+                        <img src="images/ico/3.ico"  />
+                        <a class="menu_letter">发起创作</a>
+                    </div>
+                    <div class="choice" onmouseover="touch(this)" onmouseout="leave(this)" onclick="window.open('different_kinds.html','_self')">
+                        <img src="images/ico/9.ico"  />
+                        <a class="menu_letter">分类广角</a>
+                    </div>
+                    <div class="choice" onmouseover="touch(this)" onmouseout="leave(this)" onclick="window.open('person.html','_self')">
+                        <img src="images/ico/21.ico"  />
+                        <a class="menu_letter">个人主页</a>
+                    </div>
+                    <div class="choice" onmouseover="touch(this)" onmouseout="leave(this)" onclick="window.open('random.html','_self')">
+                        <img src="images/ico/18.ico"  />
+                        <a class="menu_letter">社      区</a>    
+                    </div>
+                                                
+                </div>      
+            </div>
+                
+            <div class="foot" >
+                have fun
+                <br>
+                all copyrights reserved by infi 
+                <br>
+                联系我们 © 2017 Samaritan
+                <br>
+                my github <a href="https://github.com/Samaritan-Infi"> Samaritan_infi </a>
+                <br>
+                by blogs @<a href="http://blog.csdn.net/samaritan_infi">csdn Samaritan_infi</a>
+            </div>
+        </div>
+    </div>
+    <div style="display:none" > this is hidden here , enjoy it dude .</div>
+</BODY></HTML>

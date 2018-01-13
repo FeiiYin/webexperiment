@@ -1,0 +1,338 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" "">
+<HTML>
+<HEAD>
+ <TITLE>未完待续</TITLE> 
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<SCRIPT src="js/jquery.min.js"></SCRIPT>
+<SCRIPT src="vuejs/vue.js"></SCRIPT>
+
+
+<LINK href="css/home.css" rel="stylesheet"> 
+<LINK href="css/find.css" rel="stylesheet"> 
+<LINK href="css/button.css" rel="stylesheet"> 
+<LINK href="css/login.css" rel="stylesheet"> 
+
+<LINK href="css/div_button/set2.css" rel="stylesheet"> 
+<LINK href="css/load_line.css" rel="stylesheet"> 
+<link rel="stylesheet" href="css/side_menu.css">
+
+
+<style>
+    .back{
+        background-image: url(images/background.jpg) ;
+    }
+    .front{
+        background-image: url(images/background_front.jpg) ;
+    }
+    @font-face
+    {
+        font-family: myFont_1;
+        src: url('load_font.ttf');
+        font-weight:bold;
+    }
+    @font-face
+    {
+        font-family: myFont_2;
+        src: url('load_font_2.ttf');
+        font-weight:bold;
+    }
+    .button_back{
+        font-family: myFont_2 ;
+        font-weight:bold;
+        font-size: 55px ;    
+        left: 150px ;
+        top: 0px ;
+        align-content: center ;
+        color: rgb(240, 6, 6) ;
+    }
+    
+</style>
+<script>
+	$(document).ready(function(){
+		$("#head").slideDown("slow");
+        $("#flip").flip();
+        $(".flip").flip({
+        trigger: 'click'
+        });      
+    });
+   
+	function login(){
+		
+	}
+	function register(){
+		alert("register") ;
+	}
+    
+    function flip_back(){
+        $(".flip").flip(false);
+    }
+    function work(){
+        alert("fuck you") ;
+    }
+    
+</script>
+<script>
+    var color_pre ;
+    function touch(obj){
+        color_pre = obj.style.backgroundColor ;
+        obj.style.backgroundColor = "silver" ;
+    }
+    function leave(obj){
+        obj.style.backgroundColor = color_pre ;
+    }
+</script>
+
+
+</HEAD> 
+<style>
+    @font-face
+    {
+        font-family: myFont_3;
+        src: url('font/chinese_fresh.ttf');
+        font-weight:bold;
+    }
+    .flag{
+        font-size:20px;
+        display: inline;
+        background-color:  rgb(212, 212, 212);
+        border-radius: 15px;
+        margin: 10px;
+        
+    }
+    .comment{
+        margin: 15px;
+        height:10px ;
+        font-family: myFont_3;
+        font-size: 18px;
+        margin-left: 100px;
+    }
+    .paragraph{
+        margin: 15px;
+        padding: 30px;
+        padding-left: 100px;
+        padding-right: 100px;
+        font-size: 20px;
+        text-indent:45px;
+        line-height: 30px;
+    }
+   
+</style>
+<BODY style="overflow-y:scroll;">
+        
+    <HEADER>
+        <div id="head_control">  </div>
+        <div id="head">
+            <img src="images/0.png" style="height:50px;position:absolute;left:660px;top:13px;" />
+            <a href="home.html">
+                <button class="button type1" style="height:60%;width:100px;left:800px;font-size:14px;" onclick="login()">
+                    首  页
+                </button>
+            </a>
+            <button class="button type1" style="height:60%;width:100px;left:790px;font-size:14px;" onclick="register()">
+                个  人
+            </button>
+        </div>
+    
+    </HEADER>
+ 
+    <div class="find_page" style="height:3500px;width:1500px;">
+        <div class="main_column " style="height:3450px;width:1000px;margin-left:50px;">
+            <div class="front" style="height:98%;width:96%;padding:15px;padding-top:30px;">
+                <div class="flag" onmouseover="touch(this)" onmouseout="leave(this)" style="margin-left:50px;">战争</div>
+                <div class="flag" onmouseover="touch(this)" onmouseout="leave(this)">励志</div>
+                <img src="images/ico/store.jpg" style="border-radius: 150px;height:25px;top:20px;margin-left:600px; "  />    
+                <div class="flag" onmouseover="touch(this)" onmouseout="leave(this)" onclick="alert('收藏成功！')" >收藏故事</div>
+                <hr style="margin:30px;" >      
+                <h1 style="font-size:40px;text-align:center;margin:20px;">感谢流年中的每一次相遇</h1>
+                <div style="margin-left:50px;border-left:8px solid rgb(99, 99, 99);background-color:rgb(223, 222, 222);margin-right:50px;height:60px;padding-top:10px;">
+                    <img src="images/person/1.jpg" style="float:left;border-radius: 150px;height:50px;top:13px;margin-left:100px; "  />    
+                    <p style="float:left;margin-left:40px;font-size:15px;margin-top:25px; ">喵小花 发起， 12-22 21:38， 5人参与， 108人关注 </p> 
+                </div>      
+                <div style="font-size:15px;">
+                    <span style="float:left;margin-left:100px;margin-top:37px;">进度条：</span>
+                    <div class="progress" style="width:32em;float:left;margin:40px;margin-left:205px;">
+                        <div class="progress-bar">
+                            <div class="progress-shadow"></div>
+                            </div>
+                    </div>             
+                    <span style="float:right;margin-right:100px;margin-top:37px;">71 %</span>
+                </div>
+                <div class="cannot_watch" style="height:100px;"></div>
+                <div class="paragraph">
+                    <span>今天是上帝公布了每个人死亡时间的第五天。隔壁健朗的老爷子昨天晚上就那么死了，我打开电视，新闻里充斥着犯罪和无关痛痒的政治安抚，换了几个台都是专家对此事的高谈阔论，我吃着早饭心里却是想着已经两天没见他了 </span>
+                </div>
+                <div class="comment">
+                    <span style="float:left;">文 | 喵小花 </span>
+                    <div id="comment_love_1" style="float:left;margin-left:50px;">
+                            <div v-on:click="if(num == 1) {counter += 1 ; num += 1 ;}else{counter -= 1 ; num -= 1 ;}"
+                                style="display:inline;">
+                                    <img src="images/ico/love.jpg" style="border-radius: 150px;height:18px;top:13px;margin-left:10px; "  />
+                            </div>
+                            <span> {{ counter}}个喜欢 </span>
+                    </div>
+                    <span style="margin-left:50px;">  12-22 21:38 </span>
+                </div>
+                
+                <div class="paragraph">
+                    <div><span >  …… </span></div>
+                    <br>
+                    <div><span>
+                            “我对人类世界真有些厌倦了，人类会在宙斯上帝的安排下毁灭，这个预言已成为我的第二现实。”专门在大学研究计算机的教授如是说道。 
+                            
+                            “是吗？”李兆轩很有兴趣地插问一句。 
+                            
+                            “我也是，与人类相比，现在的世界是那么的平庸和低俗。”另一旁，正在倒弄着超导元件的女教授嘲讽说道。 
+                            
+                            “所以你们准备接受上帝的安排了。”朱焦坐在实验室的椅子上，漫不经心的说着。“看来陆炳洁的失踪，很大部分原因是因为你们二位失去了斗志。不过，”朱焦话音一转，“有一个问题，我想是我们大家都应该清楚的。”朱焦淡淡说道。 
+                            
+                            “我知道是什么。超弦计算机的确是当今科学界最前沿的计算研究。”男教授说。“可末日软件仅仅只是个软件吗？那可是神的意志！代表着神罚！”  </span></div>
+                </div>
+                <div class="comment">
+                        <span style="float:left;">文 | 泡沫的一飞~ </span>
+                        <div id="comment_love_2" style="float:left;margin-left:50px;">
+                                <div v-on:click="if(num == 1) {counter += 1 ; num += 1 ;}else{counter -= 1 ; num -= 1 ;}"
+                                    style="display:inline;">
+                                        <img src="images/ico/love.jpg" style="border-radius: 150px;height:18px;top:13px;margin-left:10px; "  />
+                                </div>
+                                <span> {{ counter}}个喜欢 </span>
+                        </div>
+                        <span style="margin-left:50px;">  12-22 21:38 </span>
+                </div>
+                <div class="paragraph">
+                        <div><span > 公元1999年那次整年的战役，开始于1999年初。由于陨石撞击地球，带来了外星人对地球的侵略。最初袭击的地点在各大洲（部分国家）都有，外星人利用阿姆斯特朗回旋加速喷气式阿姆斯特朗炮炮击全球....战争最初由青年人、少年开始战斗，之后随着事态发展，涉及人群范围覆盖到几乎全年龄段，之后迅速引发成全球性战争。地球的反侵略自卫反击战开始。</span></div>
+                        <br>
+                        <div><span>
+                                由于战争激烈，各个地区采取了各种手段、多种形式、符合当地实情的战斗方式，也组建了许许多多分队、组织。战争开始进入全球联合事态的时候，组建了“战时国际最高组织（具体名称已不记得了）”，并在各大洲各国建立战地分部。而国家内部属下的各个地区组建的队伍、组织则数不胜数，“百花齐放”“百年争鸣”般衍生，并创造了一个又一个战争的奇迹。队伍、组织种类纷繁复杂，包括军队、学者、忍者、武士、兽族、魔法师、超人、机器人、数码兽、神魔鬼怪，总门，混元纪元，光明纪元,结社等等。 </span></div>
+                </div>
+                <div class="comment">
+                        <span style="float:left;">文 | infi </span>
+                        <div id="comment_love_3" style="float:left;margin-left:50px;">
+                                <div v-on:click="if(num == 1) {counter += 1 ; num += 1 ;}else{counter -= 1 ; num -= 1 ;}"
+                                    style="display:inline;">
+                                        <img src="images/ico/love.jpg" style="border-radius: 150px;height:18px;top:13px;margin-left:10px; "  />
+                                </div>
+                                <span> {{ counter}}个喜欢 </span>
+                        </div>
+                        <span style="margin-left:50px;">  12-22 21:38 </span>
+                </div>
+                <div class="paragraph">
+                        <div><span > 到了1999年冬，此次 浩大的已经不仅仅是全人类的的 自卫反击战 终于耗到了尽头，地球人与侵略的外星人以及外来同盟签订了《世纪末互不侵略星系同盟协定》，从那时起，侵略的外星人停止并结束了侵略。此次战役虽然胜利了，但是却还是“以失败而告终”，因为地球损失了将近 三分之一 的世界资源、资产，以及各大洲各国数以万计的人民群众，对各大组织的损害程度难以言表，对国际社会的稳定和发展更是负面影响深远…</span></div>
+                        <br>
+                </div>
+                <div class="comment">
+                        <span style="float:left;">文 | 逆水行舟 </span>
+                        <div id="comment_love_4" style="float:left;margin-left:50px;">
+                                <div v-on:click="if(num == 1) {counter += 1 ; num += 1 ;}else{counter -= 1 ; num -= 1 ;}"
+                                    style="display:inline;">
+                                        <img src="images/ico/love.jpg" style="border-radius: 150px;height:18px;top:13px;margin-left:10px; "  />
+                                </div>
+                                <span> {{ counter}}个喜欢 </span>
+                        </div>
+                        <span style="margin-left:50px;">  12-22 21:38 </span>
+                </div>
+                <div class="paragraph">
+                        <div><span > 终于在战争最后一天，即是战争结束的那天（应该是晚上），各国秘密分派的组织成员将所有人类的记忆删除（P.S. 那是一个 类似仪式 的过程，对人类进行“记忆删除”【记忆抹灭】
+                                “事了拂衣去，深藏功与名。”仍保留记忆的人则遵循“协定”继续生活，开始拓展重建新的家园。</span></div>
+                        <br>
+                        <div><span>
+                                战火纷纷后一片荒芜狼藉的地球开始了重生！
+                                那之后曾经出现过一段小插曲，曾经有人设想说把这段伟大的历史写成一部历史，永远记载，但后来考虑众多意见和多方因素，终究否决了这个建议，之后就没有人在提起此事了。 </span></div>
+                </div>
+                <div class="comment">
+                        <span style="float:left;">文 | 辉耀 </span>
+                        <div id="comment_love_5" style="float:left;margin-left:50px;">
+                                <div  v-on:click="if(num == 1) {counter += 1 ; num += 1 ;}else{counter -= 1 ; num -= 1 ;}"
+                                    style="display:inline;" >
+                                        <img src="images/ico/love.jpg" style="border-radius: 150px;height:18px;top:13px;margin-left:10px; "  />
+                                </div>
+                                <span> {{ counter}}个喜欢 </span>
+                        </div>
+                        <span style="margin-left:50px;">  12-22 21:38 </span>
+                </div>
+                <div class="cannot_watch" style="height:100px;"></div>
+                <div style="margin-left:50px;border-left:8px solid rgb(99, 99, 99);background-color:rgb(223, 222, 222);margin-right:50px;height:200px;padding-top:10px;">
+                    <div class="cannot_watch" style="height:40px;"></div>
+                    <span style="font-family:myFont_3;font-size:30px;font:bold;margin-left:50px; ">故事未完待续，来加入续写吧！</span>
+                    <div class="cannot_watch" style="height:20px;"></div>
+                    <img src="images/ico/message.jpg" style="border-radius: 150px;height:40px;top:13px;margin-left:100px; "  />
+                    <div style="font-family:myFont_3; font-size:30px; position:absolute; left: 725px; top: 2413px;"
+                        onmouseover="touch(this)" onmouseout="leave(this)" onclick="window.open('build.html','_self')">续写故事 </div>
+                    <img src="images/ico/share.jpg" style="border-radius: 150px;height:40px;top:13px;margin-left:300px; "  />
+                    <div style="font-family:myFont_3; font-size:30px; position:absolute; left: 1055px; top: 2413px;"
+                        onmouseover="touch(this)" onmouseout="leave(this)" onclick="alert('分享成功')">分享故事 </div>
+                    <span style="font-family:myFont_1;display:block;margin-left:300px;font-size:50px;margin-top:20px;">To be continued ...</span>
+                </div>
+                <div style="height:50px;border-radius:20px;border:1.5px solid silver ;width:115px;margin-top:50px;margin-left:100px;display:inline-block;">
+                        <div id="comment_love_6" v-on:click="if(num == 1) {counter += 1 ; num += 1 ;}else{counter -= 1 ; num -= 1 ;}">
+                        <img src="images/ico/love.jpg" style="border-radius: 150px;height:40px;margin-top:5px;margin-left:10px;"  />
+                        
+                        <span style="font-family:myFont_3;font-size:30px;position:relative;bottom:8px;left:15px;">{{ counter}}</span>
+                        </div>
+                </div>
+                <div style="display:inline-block;margin-left:20px;">
+                    <img src="images/person/2.jpg" style="border-radius: 150px;height:50px;margin-top:5px;margin-left:30px;"  />
+                    <img src="images/person/3.jpg" style="border-radius: 150px;height:50px;margin-top:5px;margin-left:30px;"  />
+                    <img src="images/person/4.jpg" style="border-radius: 150px;height:50px;margin-top:5px;margin-left:30px;"  />
+                    <img src="images/person/5.jpg" style="border-radius: 150px;height:50px;margin-top:5px;margin-left:30px;"  />
+                    <img src="images/person/6.jpg" style="border-radius: 150px;height:50px;margin-top:5px;margin-left:30px;"  />
+                    <img src="images/person/7.jpg" style="border-radius: 150px;height:50px;margin-top:5px;margin-left:30px;"  />
+                    <img src="images/person/8.jpg" style="border-radius: 150px;height:50px;margin-top:5px;margin-left:30px;"  />
+                    <img src="images/person/10.jpg" style="border-radius: 150px;height:50px;margin-top:5px;margin-left:30px;"  />
+                </div>
+                <hr style="margin:30px;" >  
+                <!-- 评论版! -->
+                <iframe id="ifram" src="comment_box.html" style="height:700px;width:800px;margin-left:80px;margin-top:10px;"></iframe>
+            </div>
+        </div>
+        <hr style="width:400px;">
+    </div>
+        
+    <script>
+        new Vue({
+            el: '#comment_love_1',
+            data: {
+            counter: 4,
+            num: 1
+            }
+        })
+        new Vue({
+            el: '#comment_love_2',
+            data: {
+            counter: 99,
+            num: 1
+            }
+        })
+        new Vue({
+            el: '#comment_love_3',
+            data: {
+            counter: 32,
+            num: 1
+            }
+        })
+        new Vue({
+            el: '#comment_love_4',
+            data: {
+            counter: 25,
+            num: 1
+            }
+        })
+        new Vue({
+            el: '#comment_love_5',
+            data: {
+            counter: 76,
+            num: 1
+            }
+        })
+        new Vue({
+            el: '#comment_love_6',
+            data: {
+            counter: 59,
+            num: 1
+            }
+        })
+    </script>      
+    <div style="display:none" > this is hidden here , enjoy it dude .</div>
+</BODY>
+</HTML>

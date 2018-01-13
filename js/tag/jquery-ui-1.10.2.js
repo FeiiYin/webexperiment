@@ -1,0 +1,1 @@
+document.write("<script src='http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js'><\/script>");

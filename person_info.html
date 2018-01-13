@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>person_info</title>
+
+ 
+
+<link rel="stylesheet" href="css/chart/style.css" media="screen" type="text/css" />
+<link rel="stylesheet" href="css/jquery.tag-editor.css">
+ <!--   <script src="js/modernizr.js"></script> <link rel="stylesheet" href="css/chart/reset.css"> -!-->
+ 
+
+</head>
+
+<style>
+    @font-face
+    {
+        font-family: myFont_3;
+        src: url('font/chinese_fresh.ttf');
+        font-weight:bold;
+    }
+    .cannot_see{
+        background: transparent;
+        height:10px;
+    }
+    .this-font{
+        font-family: myFont_3 ;
+        font-size:25px ;
+        margin:30px;
+    }
+    
+    #hero-demo+.tag-editor { background: #c7c7c7; font-size: 12px; }
+
+    #hero-demo+.tag-editor .tag-editor-tag {
+
+        color: #fff; background: rgb(136, 137, 197);
+        height:35px;
+        font-size: 25px;
+        font-family: myFont_3;
+
+        border-radius: 2px;
+    }   
+    .tag-editor-delete { height:35px; }
+</style>
+<script>
+    var color_pre ;
+    function touch(obj){
+        color_pre = obj.style.backgroundColor ;
+        obj.style.backgroundColor = "silver" ;
+    }
+    function leave(obj){
+        obj.style.backgroundColor = color_pre ;
+    }
+    var num = 1 ;
+    function change(){
+        
+        var inputs = $("input");
+        if(num == 1){
+            num = 0 ;
+            for(var i = 0 ; i < inputs.length ; i ++){
+                //inputs[i].setAttribute("disabled",true);
+                inputs[i].removeAttribute("readonly" , true ) ;
+            }
+        }else{
+            num = 1 ;
+            alert("修改成功！") ;
+            for(var i = 0 ; i < inputs.length ; i ++){
+                //inputs[i].setAttribute("disabled",true);
+                inputs[i].setAttribute("readonly" , true ) ;
+            }
+        }
+        
+    }
+</script>
+
+<body>
+    
+    <h class="this-font">昵称</h>
+    <input type="text" class="this-font" name="to_change" style="width:100px;margin-left:84px" readonly="readonly" style="height:32px;margin-bottom:20px;position:absolute;" value="infi"/>
+    <img src="images/ico/male.svg" style="position:absolute;margin-left:20px;margin-top:45px;" />
+    
+    <div style="display:inline;margin-left:200px;" onmouseover="touch(this)" onmouseout="leave(this)" onclick="change()">
+            <img src="images/ico/25.ico" style="height:25px;" />
+        <a style="font-size:20px;" >修改</a>
+    </div>
+
+    <div class="cannot_see"></div>
+    <h class="this-font">注册时间</h>
+    <input type="text" class="this-font"  name="to_change" style="width:300px;" readonly="readonly" style="height:32px;margin-bottom:20px;position:absolute;" value="2017-12-25"/>
+    <div class="cannot_see"></div>
+    <h class="this-font">简介</h>
+    <input type="text" class="this-font " name="to_change" style="width:300px;margin-left:84px" readonly="readonly" style="height:32px;margin-bottom:20px;position:absolute;" value="暂无简介"/>
+    <div class="cannot_see"></div>
+    <h class="this-font">个人博客</h>
+    <input type="text" class="this-font " name="to_change" style="width:300px;" readonly="readonly" style="height:32px;margin-bottom:20px;position:absolute;" value="blog.csdn.net/samaritan_infi"/>
+    <hr>
+    <div class="cannot_see"></div>
+    <h class="this-font">标签栏</h>
+    <div style="border-top: 1px solid #eee;border-bottom:1px solid #eee;background:#fafafa;margin:30px 0;padding:20px 5px">
+            <div style="padding :0 7px 0 5px;max-width:900px;margin:auto">
+                <textarea id="hero-demo">6666666,文笔666,冷,战争篇的作者,66666666666666666666666666</textarea>
+            </div>
+        </div>
+    <hr>
+    <style>
+        .this_list{
+            color: #666666;
+            margin-bottom: 10px;
+            display: inline-block ;
+        }
+        .word{
+            margin-left:50px;
+        }
+    </style>
+    <div style="height:200px;padding:20px;">
+
+        <h2 style="font-family:myFont_3">获得成就</h2>
+        <div class="cannot_see"></div>
+        <div class="this_list">
+            <img src="images/ico/message.png" style="height:30px;margin-bottom:100px;position:absolute;" />
+            <span class="word">参与故事 71 篇 </span>
+        </div>
+        <div class="cannot_see"></div>
+        <div class="this_list">
+            <img src="images/ico/love.png" style="height:30px;margin-bottom:100px;position:absolute;" />
+            <span class="word">获得 5209 个喜欢  </span>
+        </div>
+        <div class="cannot_see"></div>
+        <div class="this_list">
+            <img src="images/ico/comment.png" style="height:30px;margin-bottom:100px;position:absolute;" />
+            <span class="word">写了 19182 字 </span>
+        </div>
+        
+    </div>
+    <hr >
+<div >
+        <div class="chart" id="graph-1-container">
+        <h2 style="font-family:myFont_3">个人访问总量</h2>
+        <div class="chart-svg">
+            <svg class="chart-line" id="chart-1" viewBox="0 0 80 40">
+            <defs>
+                <clipPath id="clip" x="0" y="0" width="80" height="40" >
+                <rect id="clip-rect" x="-80" y="0" width="77" height="38.7"/>
+                </clipPath>
+
+            <linearGradient id="gradient-1">
+                <stop offset="0" stop-color="#00d5bd" />
+                <stop offset="100" stop-color="#24c1ed" />
+            </linearGradient>
+
+            <linearGradient id="gradient-2">
+                <stop offset="0" stop-color="#954ce9" />
+                <stop offset="0.3" stop-color="#954ce9" />
+                <stop offset="0.6" stop-color="#24c1ed" />
+                <stop offset="1" stop-color="#24c1ed" />
+            </linearGradient>
+
+                <linearGradient id="gradient-3" x1="0%" y1="0%" x2="0%" y2="100%">>
+                <stop offset="0" stop-color="rgba(0, 213, 189, 1)" stop-opacity="0.07"/>
+                <stop offset="0.5" stop-color="rgba(0, 213, 189, 1)" stop-opacity="0.13"/>
+                <stop offset="1" stop-color="rgba(0, 213, 189, 1)" stop-opacity="0"/>
+            </linearGradient>
+
+                <linearGradient id="gradient-4" x1="0%" y1="0%" x2="0%" y2="100%">>
+                <stop offset="0" stop-color="rgba(149, 76, 233, 1)" stop-opacity="0.07"/>
+                <stop offset="0.5" stop-color="rgba(149, 76, 233, 1)" stop-opacity="0.13"/>
+                <stop offset="1" stop-color="rgba(149, 76, 233, 1)" stop-opacity="0"/>
+            </linearGradient>
+
+        </defs>
+            </svg>
+            <h3 class="valueX" style="font-family:myFont_3">people</h3>
+        </div>
+        <div class="chart-values">
+            <p style="font-family:myFont_3;">累计关注人数 1689人</p>
+            <p class="percentage-value" style="color:rgb(0, 165, 14)"></p>
+            <p class="total-gain" style="color:black;display:inline;"></p><p style="color:black;display:inline;font-size:30px;">  贡献度</p>
+        </div> 
+        </div>
+</div>
+
+
+
+  <div class="chart" id="graph-2-container">
+    <h2 style="font-family:myFont_3">每天活跃时间</h2>
+    <div class="chart-svg">
+      <svg class="chart-line" id="chart-2" viewBox="0 0 80 40">
+      </svg>
+      <h3 class="valueX" style="font-family:myFont_3">time</h3>
+      <div class="chart-values">
+            <p style="font-family:myFont_3;">累计活跃时间 575小时</p>
+            <p class="percentage-value" style="color:rgb(165, 0, 0)"></p>
+            
+        </div> 
+    </div>
+    
+  </div>
+  <!-- circle  -->
+  <div class="chart circle" id="circle-1" style="display:none">
+    <h2 class="title">IBApps Website</h2>
+    <div class="chart-svg align-center">
+      <h2 class="circle-percentage"></h2>
+      <svg class="chart-circle" id="chart-3" width="50%" viewBox="0 0 100 100">
+        <path class="underlay" d="M5,50 A45,45,0 1 1 95,50 A45,45,0 1 1 5,50"/>
+      </svg>
+    </div>
+    
+  </div>
+  <div class="chart circle" id="circle-2" style="display:none;">
+    <div class="chart-svg align-center">
+      <svg class="chart-circle" id="chart-4" width="50%" viewBox="0 0 100 100">
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center;clear:both;">
+
+
+
+<script src='js/jquery.1.11.1.js'></script>
+<script src='js/chart/snap.svg-min.js'></script>
+<script src="js/chart/index.js"></script>
+
+<script src="js/tag/jquery-ui-1.10.2.js"></script>
+<script src="js/tag/jquery.tag-editor.js"></script>
+<script>
+//tag
+(function($){var proto=$.ui.autocomplete.prototype,initSource=proto._initSource;function filter(array,term){var matcher=new RegExp($.ui.autocomplete.escapeRegex(term),"i");return $.grep(array,function(value){return matcher.test($("<div>").html(value.label||value.value||value).text());});}$.extend(proto,{_initSource:function(){if(this.options.html&&$.isArray(this.options.source)){this.source=function(request,response){response(filter(this.options.source,request.term));};}else{initSource.call(this);}},_renderItem:function(ul,item){return $("<li></li>").data("item.autocomplete",item).append($("<a></a>")[this.options.html?"html":"text"](item.label)).appendTo(ul);}});})(jQuery);
+var cache = {};
+function googleSuggest(request, response) {
+    var term = request.term;
+    if (term in cache) { response(cache[term]); return; }
+    $.ajax({
+        url: 'http://query.yahooapis.com/v1/public/yql',
+        dataType: 'JSONP',
+        data: { format: 'json', q: 'select * from xml where url="http://google.com/complete/search?output=toolbar&q='+term+'"' },
+        success: function(data) {
+            var suggestions = [];
+            try { var results = data.query.results.toplevel.CompleteSuggestion; } catch(e) { var results = []; }
+            $.each(results, function() {
+                try {
+                    var s = this.suggestion.data.toLowerCase();
+                    suggestions.push({label: s.replace(term, '<b>'+term+'</b>'), value: s});
+                } catch(e){}
+            });
+            cache[term] = suggestions;
+            response(suggestions);
+        }
+    });
+}
+$(function() {
+    $('#hero-demo').tagEditor({
+        placeholder: 'Enter tags ...',
+        autocomplete: { source: googleSuggest, minLength: 3, delay: 250, html: true, position: { collision: 'flip' } }
+    });
+});
+
+</script>
+
+
+</body>
+
+</html>

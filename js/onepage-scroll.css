@@ -1,0 +1,78 @@
+body {
+	margin: 0px; transition:opacity 400ms; overflow: hidden; -webkit-transition: opacity 400ms; -moz-transition: opacity 400ms;
+}
+html {
+	margin: 0px; transition:opacity 400ms; overflow: hidden; -webkit-transition: opacity 400ms; -moz-transition: opacity 400ms;
+}
+body {
+	padding: 0px; width: 100%; height: 100%; display: block; position: static;
+}
+.onepage-wrapper {
+	padding: 0px; width: 100%; height: 100%; display: block; position: static;
+}
+html {
+	padding: 0px; width: 100%; height: 100%; display: block; position: static;
+}
+.main {
+	margin-top: 0px;
+}
+.page1 {
+	background-repeat: no-repeat; background-size: 100% 100%;
+}
+.page2 {
+	margin-top: -50px; background-color: rgb(255, 127, 80);
+}
+.page3 {
+	margin-top: -50px; background-color: rgb(75, 191, 195);
+}
+.page4 {
+	margin-top: -50px; background-color: rgb(250, 175, 67);
+}
+p.title {
+	font: 700 40px/normal "Microsoft Yahei"; text-align: center; color: rgb(255, 255, 255); position: relative; font-size-adjust: none; font-stretch: normal;
+}
+.onepage-wrapper {
+	padding: 0px; width: 100%; height: 110%; display: block; position: relative; -webkit-transform-style: preserve-3d;
+}
+.onepage-wrapper .section {
+	width: 100%; height: 100%;
+}
+.onepage-pagination {
+	list-style: none; margin: 0px; padding: 0px; top: 50%; right: 10px; position: absolute; z-index: 5;
+}
+.onepage-pagination li {
+	padding: 0px; text-align: center;
+}
+.onepage-pagination li a {
+	padding: 10px; width: 4px; height: 4px; display: block;
+}
+.onepage-pagination li a::before {
+	background: rgba(0, 0, 0, 0.85); border-radius: 10px; width: 4px; height: 4px; position: absolute; content: ""; -moz-border-radius: 10px; -webkit-border-radius: 10px;
+}
+.onepage-pagination li a.active::before {
+	background: none; border: 1px solid black; border-image: none; left: 8px; width: 10px; height: 10px; margin-top: -4px;
+}
+.disabled-onepage-scroll {
+	overflow: auto;
+}
+.disabled-onepage-scroll .wrapper {
+	overflow: auto;
+}
+.disabled-onepage-scroll .onepage-wrapper .section {
+	left: auto !important; top: auto !important; position: relative !important;
+}
+.disabled-onepage-scroll .onepage-wrapper {
+	min-height: 100%; transform: none !important; -webkit-transform: none; -moz-transform: none;
+}
+.disabled-onepage-scroll .onepage-pagination {
+	display: none;
+}
+body.disabled-onepage-scroll {
+	position: inherit;
+}
+.disabled-onepage-scroll .onepage-wrapper {
+	position: inherit;
+}
+html {
+	position: inherit;
+}

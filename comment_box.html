@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>留言板</title>
+	<link rel="stylesheet" type="text/css" href="css/comments.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="js/jquery-1.11.3.js"></script> -->
+	<script type="text/javascript" src="js/comments.js"></script>
+</head>
+<body>
+    <style>
+        @font-face
+        {
+            font-family: myFont_3;
+            src: url('font/chinese_fresh.ttf');
+            font-weight:bold;
+        }
+    </style>
+	<div id="container">
+		<h2 style="font-family:myFont_3;font-size:30px;">评论</h2>
+		
+		<div class="textbox">
+			<div class="comments" id="comments">
+                <span style="word-break:break-all;font-family:'Microsoft Yahei';font-size:14px;font-style: italic;font-weight:bold">flyhero &nbsp; </span>  
+                <span>发表于  </span>
+                <span style="word-break:break-all;font-family:'Microsoft Yahei';font-size:14px;font-style: italic;">2017/12/23  14:53:13</span>
+                <br>
+                <span>excited!!!!</span><br>
+                
+            </div>
+		</div>
+		
+		<div id="userbox">  
+			<span class="statusm msg"></span>
+			
+			<div class="commentbox">
+				<ul class="toolbox">
+					<li class="emotion-select">
+						表情
+						<div class="emotionbox"></div>
+					</li>
+					<li class="text-b">加粗</li>
+					<li class="text-i">斜体</li>
+					<li class="text-u">下划线</li>
+				</ul>
+				<div class="commentarea" id="commentarea" contenteditable = "true">请输入留言内容</div>
+				<span class="commentm msg">留言内容不能为空！</span>
+			</div>
+			
+			<div class="userinfo">
+				<span>您的昵称：</span><input type="text" class="username" id="username" value="请输入昵称"/>
+				<span class="usernamem msg">用户昵称不能为空！</span>
+				<input type="button" value="提交留言" class="sub" id="sub" />
+			</div>
+		</div>
+	</div>
+</body>
+</html>

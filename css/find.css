@@ -1,0 +1,211 @@
+.find_page{
+    border-radius: 15px;
+    background-color: aliceblue ;
+    height: 2010px ;
+    width: 100% ;
+    left: 0px ;
+    padding-top: 77px ;
+    padding-left: 400px ;
+}
+
+.main_column{
+    border-radius: 15px;
+    font-size: 15px ;
+    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif ;
+    background-color: #ccd8e1 ;
+    height: 2000px ;
+    width: 802px ;
+    display: block ;
+    font : inherit ;
+    cursor: pointer ;
+    margin-right : 10px ;
+    left: 15%;
+    padding-top: 5px ;
+    padding-left: 5px ;
+}
+.card{
+    border-radius: 15px;
+    height: 100px ;
+    width: 795px ;
+    background-color: rgb(206, 205, 205) ;
+}
+.cannot_see{
+    height: 5px ;
+    background: transparent ;
+}
+.cannot_watch{
+    height: 10px ;
+    background: transparent ;
+}
+.find_work{
+    border-radius: 15px;
+    height: 800px ;
+    width: 795px ;
+    background-color: rgb(206, 205, 205) ;
+    padding-top: 5px ; 
+    padding-left: 2px ; 
+}
+.sidebar{
+    border-radius: 15px;
+    width:297px;
+    height:510px;
+    background-color:#ccd8e1; 
+    position:absolute; 
+    left: 1210px; 
+    top: 77px;
+    padding-top: 5px ; 
+    padding-left: 5px ;
+}
+.person{
+    border-radius: 15px;
+    width: 280px ;
+    height: 200px;
+    background-color: rgb(206, 205, 205) ;
+    padding-top: 10px ;
+    padding-left: 5px ;
+    padding-right: 5px ;
+}
+.menu{
+    border-radius: 15px;
+    width: 290px ;
+    height: 300px ;
+    background-color: rgb(206, 205, 205) ;
+}
+.flip{
+    width: 790px ;
+    height: 200px ;
+    background-color: transparent ;
+    
+}
+.front{
+    border-radius: 15px;
+    padding: 3px ;
+    box-shadow: 4px 4px 6px #888888;  
+}
+.back{
+    border-radius: 15px;
+    padding: 3px ;
+    box-shadow: 4px 4px 6px #888888;  
+}
+.image{
+    padding: 4px ;
+    border-radius: 15px;
+    height: 190px ;
+    width:190px;
+    box-shadow: 4px 4px 6px #888888;  
+}
+@font-face
+{
+    font-family: myFont_1;
+    src: url('load_font.ttf');
+    font-weight:bold;
+}
+@font-face
+{
+    font-family: myFont_2;
+    src: url('load_font_2.ttf');
+    font-weight:bold;
+}
+.find_a1{
+    position: absolute ;
+    text-shadow: inherit ;
+    font-weight:bold;
+    font-size: 50px ;
+    left: 230px ;
+    top: 25px ;
+    font-family: myFont_2 ;
+}
+.find_a2{
+    position: absolute ;
+    text-shadow: inherit ;
+    font-weight:bold;
+    font-size: 25px ;
+    left: 230px ;
+    top: 100px ;
+    
+}
+.find_a3{
+    position: absolute ;
+    text-shadow: inherit ;
+    
+    font-size: 16px ;
+    left: 650px ;
+    top: 162px ;
+    
+}
+.card_img{
+    padding: 0px ;
+    height: 100px ;
+    width: 300px ;
+    text-shadow: inherit ;
+}
+.choice{
+    border-radius: 15px;
+    
+    margin: 7px ;
+    background-color: rgb(236, 236, 236) ;
+    height: 16% ;
+    width: 90% ;
+}
+.menu_letter{
+    font-size: 15px ;
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 50px ;
+    text-align: center ;
+    line-height: 1px ;
+
+
+}
+.foot{
+    height: 300px ;
+    width: 300px ;
+    
+    position: absolute ;
+    background: transparent ;
+    margin-top: 30px ;
+    margin-left: 30px ;
+}
+#wrap 
+{ 
+ 
+ border-radius: 15px;
+ height: 190px; 
+ width: 280px; 
+ overflow: hidden; 
+ position: relative; 
+ overflow: hidden; 
+}
+#wrap ul 
+{ 
+ list-style: none; 
+ position: absolute; 
+ top: 150px; 
+ left: 140px; 
+}
+#wrap li 
+{ 
+ margin-left:2px; 
+ opacity: .3; 
+ filter: alpha(opacity=30); 
+ text-align: center; 
+ line-height: 30px; 
+ font-size: 20px; 
+ height: 30px; 
+ width: 30px; 
+ background-color: #fff; 
+ float: left; 
+ border-radius:3px; 
+ cursor:pointer; 
+}
+#slider 
+{ 
+ position: absolute; 
+ top: 0px; 
+ left: 0px; 
+}
+#slider img 
+{ 
+ float: left; 
+ border: none; 
+} 

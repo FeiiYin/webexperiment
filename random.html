@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "">
+<html >
+<head>
+<style type="text/css">
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,tr,td {margin:0;padding:0; font-size:15px; } 
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>未完待续</title>
+<script src = "vuejs/random.js" type = "text/javascript" charset="utf-8"></script>
+
+<link href="css/random.css" rel = "stylesheet" charset = "UTF-8" />
+</head>
+
+<body>
+
+
+<div id = "scene_top" style = "display : block" > 
+	<h1>点击，有概率给您分配一个好友哦！！</h1>
+	<div id = "ng" style = "display: none;" >
+		<p class = "big">
+			this message is hidden here ,
+			<br />
+			trust me 
+		</p>
+	</div>
+</div >
+<!--
+<script type="text/javascript">
+  window.onload = function(){
+    var a = mOver;
+	var b = mOut ;
+  };
+ </script>-->
+ <!--
+ z-index:100;
+
+ <div id = "frame" style="background-color:#03C;width:100%;height:100%;">
+</div> 
+<p style="margin-right:1000px; position:absolute;top:100px;z-index:50;"> nihao </p>
+-->
+
+           
+		<script>
+		const SETTINGS = {
+			rebound: {
+				tension: 16,
+				friction: 5
+			},
+			spinner: {
+				id: 'spinner',
+				radius: 90,
+				sides: 3,
+				depth: 4,
+				colors: {
+					//background: '#231E76',
+					//stroke: '#231E76',
+					background: '#f0f0f0',
+					stroke: '#272633',
+					base: null,
+					child: '#272633'
+				},
+				alwaysForward: true, // When false the spring will reverse normally.
+				restAt: 0.5, // A number from 0.1 to 0.9 || null for full rotation
+				renderBase: false
+			}
+		};
+		</script>
+		<script src="vuejs/action.js"></script>
+		
+            
+<div id = "frame"  style="width:100%;height:100%;position:absolute; top:0%;left:0%; z-index: 0;">
+</div>
+
+
+ <div id = "block1" onclick="mClick_square(this)"  onmouseover="javascript: mOver(this)" onmouseout="javascript: mOut(this)" 
+	style="position:absolute ; top:0% ; left : 0%;width:25%;height:25%;padding-top:0;text-align:center;z-index:0;">
+    <div class = "block_image">
+		
+	</div>
+</div>
+
+ <div id = "block2" onclick="mClick(this)"  onmouseover="javascript: mOver(this)" onmouseout="javascript: mOut(this)"  
+	style=" position:absolute; top:25% ;left:0%;width:25%;height:25%;padding-top:0;text-align:center;z-index:0;">
+
+ </div>
+ <div id = "block3" onclick="mClick(this)"  onmouseover="javascript: mOver(this)" onmouseout="javascript: mOut(this)"  
+	style=" position:absolute; top:50% ;left:0%;width:25%;height:25%;padding-top:0;text-align:center;z-index:0;">
+
+ </div>
+
+ <div id = "block4" onclick="mClick(this)"  onmouseover="javascript: mOver(this)" onmouseout="javascript: mOut(this)"  
+	style=" position:absolute; top:75% ;left:0%;width:25%;height:25%;padding-top:0;text-align:center;z-index:0;">
+
+ </div>
+ <div id = "block5" onclick="mClick(this)"  onmouseover="javascript: mOver(this)" onmouseout="javascript: mOut(this)"  
+	style=" position:absolute; top:0% ;left:25%; width:25%;height:25%;padding-top:0;text-align:center;z-index:0;">
+
+ </div>
+
+ <div id = "block6" onclick="mClick(this)"  onmouseover="javascript: mOver(this)" onmouseout="javascript: mOut(this)"  
+	style=" position:absolute; top:25% ;left:25%; width:25%;height:25%;padding-top:0;text-align:center;z-index:0;"></div>
+ <div id = "block7" onclick="mClick(this)"  onmouseover="javascript: mOver(this)" onmouseout="javascript: mOut(this)"  
+	style=" position:absolute; top:50% ;left:25%; width:25%;height:25%;padding-top:0;text-align:center;z-index:0;">
+
+ </div>
+  <div id = "block8" onclick="mClick(this)"  onmouseover="javascript: mOver(this)" onmouseout="javascript: mOut(this)"  
+	style=" position:absolute; top:75% ;left:25%; width:25%;height:25%;padding-top:0;text-align:center;z-index:0;">
+
+ </div>
+  <div id = "block9" onclick="mClick(this)"  onmouseover="javascript: mOver(this)" onmouseout="javascript: mOut(this)"  
+	style=" position:absolute; top:0% ;left:50%; width:25%;height:25%;padding-top:0;text-align:center;z-index:0;">
+
+ </div>
+  <div id = "block10" onclick="mClick(this)"  onmouseover="javascript: mOver(this)" onmouseout="javascript: mOut(this)"  
+	style=" position:absolute; top:25% ;left:50%; width:25%;height:25%;padding-top:0;text-align:center;z-index:0;">
+
+ </div>
+  <div id = "block11" onclick="mClick(this)"  onmouseover="javascript: mOver(this)" onmouseout="javascript: mOut(this)"  
+	style=" position:absolute; top:50% ;left:50%; width:25%;height:25%;padding-top:0;text-align:center;z-index:0;">
+
+ </div>
+  <div id = "block12" onclick="mClick(this)"  onmouseover="javascript: mOver(this)" onmouseout="javascript: mOut(this)"  
+	style=" position:absolute; top:75% ;left:50%; width:25%;height:25%;padding-top:0;text-align:center;z-index:0;">
+
+ </div>
+   <div id = "block13" onclick="mClick(this)"  onmouseover="javascript: mOver(this)" onmouseout="javascript: mOut(this)"  
+	style=" position:absolute; top:0% ;left:75%; width:25%;height:25%;padding-top:0;text-align:center;z-index:0;">
+
+ </div>
+   <div id = "block14" onclick="mClick(this)"  onmouseover="javascript: mOver(this)" onmouseout="javascript: mOut(this)"  
+	style=" position:absolute; top:25% ;left:75%; width:25%;height:25%;padding-top:0;text-align:center;z-index:0;">
+
+ </div>
+   <div id = "block15" onclick="mClick(this)"  onmouseover="javascript: mOver(this)" onmouseout="javascript: mOut(this)"  
+	style=" position:absolute; top:50% ;left:75%; width:25%;height:25%;padding-top:0;text-align:center;z-index:0;">
+
+ </div>
+   <div id = "block16" onclick="mClick_infinity(this)"  onmouseover="javascript: mOver(this)" onmouseout="javascript: mOut(this)"  
+	style=" position:absolute; top:75% ;left:75%; width:25%;height:25%;padding-top:0;text-align:center;z-index:0;">
+
+ </div>
+
+
+</body>
+</html>

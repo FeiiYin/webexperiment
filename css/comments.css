@@ -1,0 +1,177 @@
+@charset 'UTF-8';
+
+#container
+{
+    font-family: 'Microsoft Yahei';
+    font-size: 14px;
+
+    width: 700px;
+    height: 609px;
+    margin: 0 auto;
+    padding: 0;
+}
+#container .textbox .comments
+{
+    overflow-y: auto;
+
+    width: 688px;
+    height: 328px;
+    margin: 0 auto;
+    padding: 5px;
+
+    word-break: break-all;			/*自动换行并且设置Y轴滚动*/
+
+    border: 1px solid #c8cdd2;
+}
+
+/*用户部分*/
+#userbox
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    width: 700px;
+    height: 185px;
+    margin: 0 auto;
+    padding: 15px 0 0;
+}
+
+/*提示信息设置*/
+#userbox .msg
+{
+    font-size: 10px;
+    line-height: 10px;
+
+    display: inline-block;
+
+    color: red;
+}
+#userbox .statusm
+{
+    position: absolute;
+    top: 3px;
+    left: 0;
+
+    display: none;
+}
+#userbox .commentbox .commentm
+{
+    position: absolute;
+    top: 138px;
+    left: 0;
+
+    display: none;
+}
+#userbox .userinfo .usernamem
+{
+    display: none;
+}
+
+
+#userbox .commentbox
+{
+    width: 700px;
+    height: 135px;
+    margin: 0 auto 0;
+    padding: 0;
+}
+
+/*留言板工具栏*/
+#userbox .commentbox .toolbox
+{
+    width: 698px;
+    height: 34px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    border: 1px solid #c8cdd2;
+    border-bottom: 0;
+}
+#userbox .commentbox .toolbox li
+{
+    line-height: 34px;
+
+    display: inline-block;
+    float: left;
+
+    width: 80px;
+    height: 34px;
+
+    cursor: pointer;
+    text-align: center;
+}
+#userbox .commentbox .toolbox li:hover
+{
+    color: #fff;
+    background-color: #ddd;
+}
+
+
+/*工具栏中表情选择*/
+#userbox .commentbox .toolbox .emotion-select
+{
+    position: relative;
+}
+#userbox .commentbox .toolbox .emotion-select .emotionbox
+{
+    position: absolute;
+    top: -96px;
+    left: -1px;
+
+    display: none;
+
+    width: 128px;
+    height: 96px;
+    margin: 0;
+    padding: 0;
+}
+#userbox .commentbox .toolbox .emotion-select .emotionbox img
+{
+    display: block;
+    float: left;
+
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+
+    cursor: pointer;
+
+    border: 1px solid #c8cdd2;
+}
+#userbox .commentbox .toolbox .emotion-select:hover .emotionbox
+{
+    display: block;
+}
+#userbox .commentbox .toolbox .emotion-select .emotionbox img:hover
+{
+    border-color: #000;
+}
+
+
+#userbox .commentbox .commentarea
+{
+    width: 688px;
+    height: 75px;
+    margin: 0 auto;
+    padding: 5px;
+
+    border: 1px solid #c8cdd2;
+
+    word-break: break-all;
+    overflow-y: auto;
+}
+#userbox .userinfo
+{
+    width: 700px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0;
+}
+#userbox .userinfo .sub
+{
+    float: right;
+}

@@ -1,0 +1,537 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" "">
+<HTML>
+<HEAD>
+ <TITLE>未完待续</TITLE> 
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<SCRIPT src="js/jquery.min.js"></SCRIPT>
+<SCRIPT src="js/jquery.onepage-scroll.min.js"></SCRIPT>
+<SCRIPT src="js/jquery.flip.js"></SCRIPT>
+<SCRIPT src="js/blower-loading.js"></SCRIPT>
+<script src="js/jquery.1.11.1.js"></script>
+<script type="text/javascript" src='js/scroll.1.3.js'></script>
+
+
+
+
+<LINK href="js/onepage-scroll.css" rel="stylesheet"> 
+<LINK href="css/home.css" rel="stylesheet"> 
+<LINK href="css/find.css" rel="stylesheet"> 
+<LINK href="css/button.css" rel="stylesheet"> 
+<LINK href="css/login.css" rel="stylesheet"> 
+<LINK href="css/load_line.css" rel="stylesheet"> 
+
+    
+<LINK href="css/div_button/set2.css" rel="stylesheet"> 
+
+
+<link rel="stylesheet" href="css/side_menu.css">
+
+
+<style>
+    .back{
+        background-image: url(images/background.jpg) ;
+    }
+    .front{
+        background-image: url(images/background_front.jpg) ;
+    }
+    @font-face
+    {
+        font-family: myFont_1;
+        src: url('load_font.ttf');
+        font-weight:bold;
+    }
+    @font-face
+    {
+        font-family: myFont_2;
+        src: url('load_font_2.ttf');
+        font-weight:bold;
+    }
+    @font-face
+    {
+        font-family: myFont_3;
+        src: url('font/chinese_fresh.ttf');
+        font-weight:bold;
+    }
+    .button_back{
+        font-family: myFont_2 ;
+        font-weight:bold;
+        font-size: 55px ;
+   
+        left: 150px ;
+        top: 0px ;
+        align-content: center ;
+        color: rgb(240, 6, 6) ;
+    }
+    
+</style>
+<script>
+	$(document).ready(function(){
+		$("#head").slideDown("slow");
+        $("#flip").flip();
+        $(".flip").flip({
+        trigger: 'click'
+        });      
+    });
+   
+	function login(){
+		
+	}
+	function register(){
+		alert("register") ;
+	}
+    
+    function flip_back(){
+        $(".flip").flip(false);
+    }
+    function work(){
+        alert("fuck you") ;
+    }
+    
+</script>
+<script>
+    var color_pre ;
+    function touch(obj){
+        color_pre = obj.style.backgroundColor ;
+        obj.style.backgroundColor = "silver" ;
+    }
+    function leave(obj){
+        obj.style.backgroundColor = color_pre ;
+    }
+</script>
+<!-- important  to use other jquery  -->
+<script>
+    console.log($().jquery); 
+    var $jq = jQuery.noConflict(true);
+    console.log($().jquery); 
+    jq.$(document).ready( function() {
+        var $submenu = $('.submenu');
+        var $mainmenu = $('.mainmenu');
+        $submenu.hide();
+        $submenu.first().delay(400).slideDown(700);
+        $submenu.on('click','li', function() {
+            $submenu.siblings().find('li').removeClass('chosen');
+            $(this).addClass('chosen');
+        });
+        $mainmenu.on('click', 'li', function() {
+            $(this).next('.submenu').slideToggle().siblings('.submenu').slideUp();
+        });
+        $mainmenu.children('li:last-child').on('click', function() {
+            $mainmenu.fadeOut().delay(500).fadeIn();
+    });
+});
+ </script>
+ <script type="text/javascript"> 
+    window.onload = function () { 
+     flag = 0; 
+     obj1 = document.getElementById("slider"); 
+     obj2 = document.getElementsByTagName("li"); 
+     obj2[0].style.backgroundColor = "#666666";
+     //默认被选中颜色 
+     time = setInterval("turn();", 2500); 
+     obj1.onmouseover = function () { 
+      clearInterval(time); 
+     } 
+     obj1.onmouseout = function () { 
+      time = setInterval("turn();", 2700); 
+     } 
+    
+     for (var num = 0; num < obj2.length; num++) { 
+      obj2[num].onmouseover = function () { 
+       turn(this.innerHTML); 
+       clearInterval(time); 
+      } 
+      obj2[num].onmouseout = function () { 
+       time = setInterval("turn();", 2700); 
+      } 
+     } 
+    } 
+    function turn(value) { 
+     if (value != null) { 
+      flag = value - 2; 
+     } 
+     if (flag < obj2.length - 1) 
+      flag++; 
+     else
+      flag = 0; 
+     obj1.style.top = flag * (-190) + "px"; 
+     for (var j = 0; j < obj2.length; j++) { 
+      obj2[j].style.backgroundColor = "#ffffff"; 
+     } 
+     obj2[flag].style.backgroundColor = "#666666"; 
+    } 
+   </script> 
+
+</HEAD> 
+<BODY style="overflow-y:scroll;">
+    <HEADER>
+        <div id="head_control">  </div>
+        <div id="head">
+            <img src="images/0.png" style="height:50px;position:absolute;left:660px;top:13px;" /><a href="home.html">
+            <button class="button type1" style="height:60%;width:100px;left:800px;font-size:14px;" onclick="login()">
+                首  页
+            </button>
+            </a>
+            
+        </div>
+    
+    </HEADER>
+
+    <div class="find_page">
+        
+        <div class="main_column" style="width:1100px;">
+
+                    <div style="float:right;background-color:grey;width:250px;height:190px;margin-right:30px;margin-top:20px;">
+                        <div class="myK" onmouseover="touch(this)" onmouseout="leave(this)">文章属性</div>
+                        <div class="myY" onmouseover="touch(this)" onmouseout="leave(this)">访问量：10024人次</div>
+                        <div class="myK" onmouseover="touch(this)" onmouseout="leave(this)" onclick="alert('置顶成功！')">置顶文章</div>
+                        <div class="myY" onmouseover="touch(this)" onmouseout="leave(this)">用户评分：较高</div>
+                        <div class="myK" onmouseover="touch(this)" onmouseout="leave(this)" onclick="alert('删除成功！')">删除文章</div>
+                    </div>
+                    
+            <style>
+                .myK{
+                    background-color:white;
+                    height:18%;
+                    border:2px solid rgb(99, 99, 99);
+                    font-family:myFont_3;
+                    font-size: 20px;
+                }
+                .myY{
+                    background-color:rgb(197, 197, 197);
+                    height:18%;
+                    border:2px solid rgb(99, 99, 99);
+                    font-family:myFont_3;
+                    font-size: 20px;
+                }
+            </style>
+
+            <div class="card">
+                
+            <div class="cannot_see"></div>
+            <div class="find_work">
+                <div>
+                <div class="flip" >
+                    <div class="front">
+                        <img src="images/img/1.jpg" class="image" />
+                        <div style="position:absolute;top:15px;left:180px;height: 60px;width:500px; padding-top: 10px; margin-right: 50px; margin-left: 50px; 
+                         backface-visibility: hidden;"  />    
+                         <img src="images/person/1.jpg" style="float:left;border-radius: 150px;height:50px;top:13px;margin-left:10px; "  />    
+                            <p style="float:left;margin-left:40px;font-size:15px;margin-top:25px; ">喵小花 发起， 12-22 21:38， 5人参与， 108人关注 </p> 
+                        </div>  
+                        <a2 class="find_a2" style="font-family:myFont_3">感谢流年中的每一次相遇...</a2>
+                        
+                        <div class="container_card">
+                            <div class="progress" style="width:32em;">
+                                <div class="progress-bar">
+                                    <div class="progress-shadow"></div>
+                                    </div>
+                            </div>
+                        </div>
+                        <a3 class="find_a3"> 100 % </a3>
+                    </div> 
+                    
+                    <div class="grid back" style="padding:0px;" >
+                        <figure class="effect-julia" style="margin:0px;margin-top:20px;height:160px; margin-left: 200px;"
+                                onclick="window.open('read.html','_self')"> <!--height: 160px; margin-left: 200px;-->
+                            <img src="images/background.jpg" alt="img21"/>
+                            <figcaption>
+                                <h2>Here <span>To be continued....</span></h2>
+                                <div style="">
+                                    <p style="font-size:17px;">点击..... click here ....</p>
+                                    <p style="font-family:myFont_3;font-size:20px;">开启一段心的旅程....</p>
+                                </div>
+                                <a href="#">View more</a>
+                            </figcaption>			
+                        </figure>
+                    </div>
+                    
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+                    
+                <div class="cannot_watch"></div>
+                <div class="flip">
+                    <div class="front">
+                        <img src="images/img/2.jpg" class="image" />
+                        <div style="position:absolute;top:15px;left:180px;height: 60px;width:500px; padding-top: 10px; margin-right: 50px; margin-left: 50px; 
+                         backface-visibility: hidden;"  />    
+                         <img src="images/person/2.jpg" style="float:left;border-radius: 150px;height:50px;top:13px;margin-left:10px; "  />    
+                            <p style="float:left;margin-left:40px;font-size:15px;margin-top:25px; ">伯庸 发起， 12-22 21:38， 5人参与， 108人关注 </p> 
+                        </div>  
+                        <a2 class="find_a2" style="font-family:myFont_3">我写了九封信，寄给了九个人，信里只有一句话――你的孤独是什么样子？ 现在我在等待回信。</a2>
+                        <div class="container_card">
+                                <div class="progress" style="width:27em;">
+                                    <div class="progress-bar">
+                                        <div class="progress-shadow"></div>
+                                        </div>
+                                </div>
+                            </div>
+                            <a3 class="find_a3"> 84 %</a3>
+                    </div> 
+                    <div class="grid back" style="padding:0px;" >
+                        <figure class="effect-julia" style="margin:0px;margin-top:20px;height:160px; margin-left: 200px;"
+                                onclick="window.open('read.html','_self')"> <!--height: 160px; margin-left: 200px;-->
+                            <img src="images/background.jpg" alt="img21"/>
+                            <figcaption>
+                                <h2>Here <span>To be continued....</span></h2>
+                                <div style="">
+                                    <p style="font-size:17px;">点击..... click here ....</p>
+                                    <p style="font-family:myFont_3;font-size:20px;">开启一段心的旅程....</p>
+                                </div>
+                                <a href="#">View more</a>
+                            </figcaption>			
+                        </figure>
+                    </div>
+                </div>
+                <div class="cannot_watch"></div>
+                
+                <div class="flip" >
+                    <div class="front">
+                            <img src="images/img/3.jpg" class="image" />
+                            <div style="position:absolute;top:15px;left:180px;height: 60px;width:500px; padding-top: 10px; margin-right: 50px; margin-left: 50px; 
+                             backface-visibility: hidden;"  />    
+                             <img src="images/person/3.jpg" style="float:left;border-radius: 150px;height:50px;top:13px;margin-left:10px; "  />    
+                                <p style="float:left;margin-left:40px;font-size:15px;margin-top:25px; ">WHS| 发起， 12-22 21:38， 5人参与， 108人关注 </p> 
+                            </div>  
+                            <a2 class="find_a2" style="font-family:myFont_3">最近， 我的手机电量从没满过。</a2>
+                            <div class="container_card">
+                                <div class="progress" style="width:8em;">
+                                    <div class="progress-bar">
+                                        <div class="progress-shadow"></div>
+                                        </div>
+                                </div>
+                            </div>
+                            <a3 class="find_a3"> 25 %</a3>
+                    </div> 
+                    <div class="grid back" style="padding:0px;" >
+                        <figure class="effect-julia" style="margin:0px;margin-top:20px;height:160px; margin-left: 200px;"
+                                onclick="window.open('read.html','_self')"> <!--height: 160px; margin-left: 200px;-->
+                            <img src="images/background.jpg" alt="img21"/>
+                            <figcaption>
+                                <h2>Here <span>To be continued....</span></h2>
+                                <div style="">
+                                    <p style="font-size:17px;">点击..... click here ....</p>
+                                    <p style="font-family:myFont_3;font-size:20px;">开启一段心的旅程....</p>
+                                </div>
+                                <a href="#">View more</a>
+                            </figcaption>			
+                        </figure>
+                    </div>
+                </div>
+                <div class="cannot_watch"></div>
+                <div class="flip">
+                    <div class="front">
+                        <img src="images/img/4.jpg" class="image" />
+                        <div style="position:absolute;top:15px;left:180px;height: 60px;width:500px; padding-top: 10px; margin-right: 50px; margin-left: 50px; 
+                         backface-visibility: hidden;"  />    
+                         <img src="images/person/4.jpg" style="float:left;border-radius: 150px;height:50px;top:13px;margin-left:10px; "  />    
+                            <p style="float:left;margin-left:40px;font-size:15px;margin-top:25px; ">浪子 发起， 12-22 21:38， 5人参与， 108人关注 </p> 
+                        </div>  
+                        <a2 class="find_a2" style="font-family:myFont_3">我们把世界看错了，反说它欺骗我们。</a2>
+                        <div class="container_card">    
+                            <div class="progress" style="width:21em;">
+                                <div class="progress-bar">
+                                    <div class="progress-shadow"></div>
+                                    </div>
+                            </div>
+                        </div>
+                        <a3 class="find_a3"> 65 %</a3>
+                    </div> 
+                    <div class="grid back" style="padding:0px;" >
+                        <figure class="effect-julia" style="margin:0px;margin-top:20px;height:160px; margin-left: 200px;"
+                                onclick="window.open('read.html','_self')"> <!--height: 160px; margin-left: 200px;-->
+                            <img src="images/background.jpg" alt="img21"/>
+                            <figcaption>
+                                <h2>Here <span>To be continued....</span></h2>
+                                <div style="">
+                                    <p style="font-size:17px;">点击..... click here ....</p>
+                                    <p style="font-family:myFont_3;font-size:20px;">开启一段心的旅程....</p>
+                                </div>
+                                <a href="#">View more</a>
+                            </figcaption>			
+                        </figure>
+                    </div>
+                </div>
+                <div class="cannot_watch"></div>
+                <div class="flip">
+                    <div class="front">
+                        <img src="images/img/5.jpg" class="image" />
+                        <div style="position:absolute;top:15px;left:180px;height: 60px;width:500px; padding-top: 10px; margin-right: 50px; margin-left: 50px; 
+                            backface-visibility: hidden;"  />    
+                            <img src="images/person/5.jpg" style="float:left;border-radius: 150px;height:50px;top:13px;margin-left:10px; "  />    
+                            <p style="float:left;margin-left:40px;font-size:15px;margin-top:25px; ">喜生墙 发起， 12-22 21:38， 5人参与， 108人关注 </p> 
+                        </div>  
+                        <a2 class="find_a2" style="font-family:myFont_3">青涩不由青春，聚散不由你我。</a2>
+                        <div class="container_card">
+                            <div class="progress" style="width:10em;">
+                                <div class="progress-bar">
+                                    <div class="progress-shadow"></div>
+                                    </div>
+                            </div>
+                        </div>
+                        <a3 class="find_a3"> 31 %</a3>
+                    </div> 
+                    <div class="grid back" style="padding:0px;" >
+                        <figure class="effect-julia" style="margin:0px;margin-top:20px;height:160px; margin-left: 200px;"
+                                onclick="window.open('read.html','_self')"> <!--height: 160px; margin-left: 200px;-->
+                            <img src="images/background.jpg" alt="img21"/>
+                            <figcaption>
+                                <h2>Here <span>To be continued....</span></h2>
+                                <div style="">
+                                    <p style="font-size:17px;">点击..... click here ....</p>
+                                    <p style="font-family:myFont_3;font-size:20px;">开启一段心的旅程....</p>
+                                </div>
+                                <a href="#">View more</a>
+                            </figcaption>			
+                        </figure>
+                    </div>
+                </div>
+                <div class="cannot_watch"></div>
+                <div class="flip">
+                        <div class="front">
+                            <img src="images/img/6.jpg" class="image" />
+                            <div style="position:absolute;top:15px;left:180px;height: 60px;width:500px; padding-top: 10px; margin-right: 50px; margin-left: 50px; 
+                                backface-visibility: hidden;"  />    
+                                <img src="images/person/6.jpg" style="float:left;border-radius: 150px;height:50px;top:13px;margin-left:10px; "  />    
+                                <p style="float:left;margin-left:40px;font-size:15px;margin-top:25px; ">@in 发起， 12-22 21:38， 5人参与， 108人关注 </p> 
+                            </div>  
+                            <a2 class="find_a2" style="font-family:myFont_3">听马蹄声渐渐，我却独自饮酒对黄昏。 我不是归人，而是过客。 繁花三千，不若仗剑走天涯。 </a2>
+                            <div class="container_card">
+                                <div class="progress" style="width:10em;">
+                                    <div class="progress-bar">
+                                        <div class="progress-shadow"></div>
+                                        </div>
+                                </div>
+                            </div>
+                            <a3 class="find_a3"> 31 %</a3>
+                        </div> 
+                        <div class="grid back" style="padding:0px;" >
+                            <figure class="effect-julia" style="margin:0px;margin-top:20px;height:160px; margin-left: 200px;"
+                                    onclick="window.open('read.html','_self')"> <!--height: 160px; margin-left: 200px;-->
+                                <img src="images/background.jpg" alt="img21"/>
+                                <figcaption>
+                                    <h2>Here <span>To be continued....</span></h2>
+                                    <div style="">
+                                        <p style="font-size:17px;">点击..... click here ....</p>
+                                        <p style="font-family:myFont_3;font-size:20px;">开启一段心的旅程....</p>
+                                    </div>
+                                    <a href="#">View more</a>
+                                </figcaption>			
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="cannot_watch"></div>
+                    <div class="flip">
+                        <div class="front">
+                            <img src="images/img/7.jpg" class="image" />
+                            <div style="position:absolute;top:15px;left:180px;height: 60px;width:500px; padding-top: 10px; margin-right: 50px; margin-left: 50px; 
+                                backface-visibility: hidden;"  />    
+                                <img src="images/person/7.jpg" style="float:left;border-radius: 150px;height:50px;top:13px;margin-left:10px; "  />    
+                                <p style="float:left;margin-left:40px;font-size:15px;margin-top:25px; ">零度的可乐 发起， 12-22 21:38， 5人参与， 108人关注 </p> 
+                            </div>  
+                            <a2 class="find_a2" style="font-family:myFont_3">此时此刻，他一个人，拎着旧剑，披着破斗笠，倚着陈年老树。</a2>
+                            <div class="container_card">
+                                <div class="progress" style="width:10em;">
+                                    <div class="progress-bar">
+                                        <div class="progress-shadow"></div>
+                                        </div>
+                                </div>
+                            </div>
+                            <a3 class="find_a3"> 31 %</a3>
+                        </div> 
+                        <div class="grid back" style="padding:0px;" >
+                            <figure class="effect-julia" style="margin:0px;margin-top:20px;height:160px; margin-left: 200px;"
+                                    onclick="window.open('read.html','_self')"> <!--height: 160px; margin-left: 200px;-->
+                                <img src="images/background.jpg" alt="img21"/>
+                                <figcaption>
+                                    <h2>Here <span>To be continued....</span></h2>
+                                    <div style="">
+                                        <p style="font-size:17px;">点击..... click here ....</p>
+                                        <p style="font-family:myFont_3;font-size:20px;">开启一段心的旅程....</p>
+                                    </div>
+                                    <a href="#">View more</a>
+                                </figcaption>			
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="cannot_watch"></div>
+                    <div class="flip">
+                        <div class="front">
+                            <img src="images/img/8.jpg" class="image" />
+                            <div style="position:absolute;top:15px;left:180px;height: 60px;width:500px; padding-top: 10px; margin-right: 50px; margin-left: 50px; 
+                                backface-visibility: hidden;"  />    
+                                <img src="images/person/8.jpg" style="float:left;border-radius: 150px;height:50px;top:13px;margin-left:10px; "  />    
+                                <p style="float:left;margin-left:40px;font-size:15px;margin-top:25px; ">杀马特 发起， 12-22 21:38， 5人参与， 108人关注 </p> 
+                            </div>  
+                            <a2 class="find_a2" style="font-family:myFont_3">这个少年，竟然……是个女子。</a2>
+                            <div class="container_card">
+                                <div class="progress" style="width:10em;">
+                                    <div class="progress-bar">
+                                        <div class="progress-shadow"></div>
+                                        </div>
+                                </div>
+                            </div>
+                            <a3 class="find_a3"> 31 %</a3>
+                        </div> 
+                        <div class="grid back" style="padding:0px;" >
+                            <figure class="effect-julia" style="margin:0px;margin-top:20px;height:160px; margin-left: 200px;"
+                                    onclick="window.open('read.html','_self')"> <!--height: 160px; margin-left: 200px;-->
+                                <img src="images/background.jpg" alt="img21"/>
+                                <figcaption>
+                                    <h2>Here <span>To be continued....</span></h2>
+                                    <div style="">
+                                        <p style="font-size:17px;">点击..... click here ....</p>
+                                        <p style="font-family:myFont_3;font-size:20px;">开启一段心的旅程....</p>
+                                    </div>
+                                    <a href="#">View more</a>
+                                </figcaption>			
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="cannot_watch"></div>
+                    <div class="flip">
+                        <div class="front">
+                            <img src="images/img/9.jpg" class="image" />
+                            <div style="position:absolute;top:15px;left:180px;height: 60px;width:500px; padding-top: 10px; margin-right: 50px; margin-left: 50px; 
+                                backface-visibility: hidden;"  />    
+                                <img src="images/person/9.jpg" style="float:left;border-radius: 150px;height:50px;top:13px;margin-left:10px; "  />    
+                                <p style="float:left;margin-left:40px;font-size:15px;margin-top:25px; ">infi 发起， 12-22 21:38， 5人参与， 108人关注 </p> 
+                            </div>  
+                            <a2 class="find_a2" style="font-family:myFont_3">对镜花黄……岂不是碧落凡尘的佳人？</a2>
+                            <div class="container_card">
+                                <div class="progress" style="width:10em;">
+                                    <div class="progress-bar">
+                                        <div class="progress-shadow"></div>
+                                        </div>
+                                </div>
+                            </div>
+                            <a3 class="find_a3"> 31 %</a3>
+                        </div> 
+                        <div class="grid back" style="padding:0px;" >
+                            <figure class="effect-julia" style="margin:0px;margin-top:20px;height:160px; margin-left: 200px;"
+                                    onclick="window.open('read.html','_self')"> <!--height: 160px; margin-left: 200px;-->
+                                <img src="images/background.jpg" alt="img21"/>
+                                <figcaption>
+                                    <h2>Here <span>To be continued....</span></h2>
+                                    <div style="">
+                                        <p style="font-size:17px;">点击..... click here ....</p>
+                                        <p style="font-family:myFont_3;font-size:20px;">开启一段心的旅程....</p>
+                                    </div>
+                                    <a href="#">View more</a>
+                                </figcaption>			
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="cannot_watch"></div>
+            
+        </div>  
+       
+    </div>
+    <div style="display:none" > this is hidden here , enjoy it dude .</div>
+</BODY></HTML>

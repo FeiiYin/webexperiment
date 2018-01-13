@@ -1,0 +1,348 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" "">
+<HTML>
+<HEAD>
+ <TITLE>未完待续</TITLE> 
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<SCRIPT src="js/jquery.min.js"></SCRIPT>
+<SCRIPT src="js/jquery.1.11.1.js"></SCRIPT>
+
+
+<LINK href="css/home.css" rel="stylesheet"> 
+<LINK href="css/find.css" rel="stylesheet"> 
+<LINK href="css/button.css" rel="stylesheet"> 
+
+
+<LINK href="css/div_button/set2.css" rel="stylesheet"> 
+<LINK href="css/div_button/set1.css" rel="stylesheet"> 
+<link rel="stylesheet" href="css/side_menu.css">
+
+
+<style>
+    .back{
+        background-image: url(images/background.jpg) ;
+    }
+    .front{
+        background-image: url(images/background_front.jpg) ;
+    }
+    @font-face
+    {
+        font-family: myFont_1;
+        src: url('load_font.ttf');
+        font-weight:bold;
+    }
+    @font-face
+    {
+        font-family: myFont_2;
+        src: url('load_font_2.ttf');
+        font-weight:bold;
+    }
+    @font-face
+    {
+        font-family: myFont_3;
+        src: url('font/chinese_fresh.ttf');
+        font-weight:bold;
+    }
+    .button_back{
+        font-family: myFont_2 ;
+        font-weight:bold;
+        font-size: 55px ;
+   
+        left: 150px ;
+        top: 0px ;
+        align-content: center ;
+        color: rgb(240, 6, 6) ;
+    }
+    .fresh_font{
+        font-family: myFont_3 ;
+    }
+</style>
+<script>
+	$(document).ready(function(){
+		$("#head").slideDown("slow");
+        $("#flip").flip();
+        $(".flip").flip({
+        trigger: 'click'
+        });      
+    });
+   
+	function login(){
+		
+	}
+	function register(){
+		alert("register") ;
+	}
+    
+    function flip_back(){
+        $(".flip").flip(false);
+    }
+    function work(){
+        alert("fuck you") ;
+    }
+    
+</script>
+<script>
+    var color_pre ;
+    function touch(obj){
+        color_pre = obj.style.backgroundColor ;
+        obj.style.backgroundColor = "silver" ;
+    }
+    function leave(obj){
+        obj.style.backgroundColor = color_pre ;
+    }
+</script>
+
+
+</HEAD> 
+<BODY style="overflow-y:scroll;">
+        
+    <HEADER>
+        <div id="head_control">  </div>
+        <div id="head">
+            <img src="images/0.png" style="height:50px;position:absolute;left:660px;top:13px;" /><a href="home.html">
+            <button class="button type1" style="height:60%;width:100px;left:800px;font-size:14px;" onclick="login()">
+                首  页
+            </button>
+            </a>
+            <button class="button type1" style="height:60%;width:100px;left:790px;font-size:14px;" onclick="register()">
+                个  人
+            </button>
+        </div>
+    
+    </HEADER>
+    <div class="find_page" style="height:850px;padding-left:100px;width:1500px;">
+        <div class="main_column " style="height:830px;width:1710px;">
+            <div class="front" style="height:98%;width:98%;">
+                <div style="margin-left:68px;">
+                    <div class="grid" style="margin-left:15px;display:inline;">
+                        <figure class="effect-apollo" id="hobby_1" style="height:200px;">
+                            <img src="images/hobby/1.jpg" alt="img16"/>
+                            <figcaption>
+                                <h2 style="top:130px;">Noisy <span>科幻</span></h2>
+                                
+                            </figcaption>			
+                        </figure>
+                        
+                    </div>
+                    <div class="grid" style="margin-left:15px;display:inline;">
+                        <figure class="effect-jazz" id="hobby_2" style="height:200px;">
+                            <img src="images/hobby/3.jpg" alt="img16"/>
+                            <figcaption>
+                                <h2 style="top:130px;">Noisy <span>文艺</span></h2>
+                                
+                            </figcaption>			
+                        </figure>
+                        
+                    </div>
+                    <div class="grid" style="margin-left:15px;display:inline;">
+                        <figure class="effect-apollo" id="hobby_3" style="height:200px;">
+                            <img src="images/hobby/4.jpg" alt="img16"/>
+                            <figcaption>
+                                <h2 style="top:130px;">Noisy <span>古风</span></h2>
+                                
+                            </figcaption>			
+                        </figure>
+                        
+                    </div>
+                </div>
+                <div style="margin-left:68px;">
+                        <div class="grid" style="margin-left:15px;display:inline;">
+                            <figure class="effect-jazz" id="hobby_4" style="height:200px;">
+                                <img src="images/hobby/5.jpg" alt="img16"/>
+                                <figcaption>
+                                    <h2 style="top:130px;">Noisy <span>励志</span></h2>
+                                    
+                                </figcaption>			
+                            </figure>
+                            
+                        </div>
+                        <div class="grid" style="margin-left:15px;display:inline;">
+                            <figure class="effect-apollo" id="hobby_5" style="height:200px;">
+                                <img src="images/img/16.jpg" alt="img16"/>
+                                <figcaption>
+                                    <h2 style="top:130px;">Noisy <span>散文</span></h2>
+                                    
+                                </figcaption>			
+                            </figure>
+                            
+                        </div>
+                        <div class="grid" style="margin-left:15px;display:inline;">
+                            <figure class="effect-jazz" id="hobby_6" style="height:200px;">
+                                <img src="images/hobby/6.jpg" alt="img16"/>
+                                <figcaption>
+                                    <h2 style="top:130px;">Noisy <span>青春</span></h2>
+                                    
+                                </figcaption>			
+                            </figure>
+                            
+                        </div>
+                    </div>
+                    <div style="margin-left:68px;">
+                            <div class="grid" style="margin-left:15px;display:inline;">
+                                <figure class="effect-apollo" id="hobby_7" style="height:200px;">
+                                    <img src="images/hobby/7.jpg" alt="img16"/>
+                                    <figcaption>
+                                        <h2 style="top:130px;">Noisy <span>童话</span></h2>
+                                        
+                                    </figcaption>			
+                                </figure>
+                                
+                            </div>
+                            <div class="grid" style="margin-left:15px;display:inline;">
+                                <figure class="effect-jazz" id="hobby_8" style="height:200px;">
+                                    <img src="images/hobby/8.jpg" alt="img16"style="width:600px;"/>
+                                    <figcaption>
+                                        <h2 style="top:130px;">Noisy <span>人性</span></h2>
+                                        
+                                    </figcaption>			
+                                </figure>
+                                
+                            </div>
+                            <div class="grid" style="margin-left:15px;display:inline;">
+                                <figure class="effect-apollo" id="hobby_9" style="height:200px;">
+                                    <img src="images/hobby/9.jpg" alt="img16"/>
+                                    <figcaption>
+                                        <h2 style="top:130px;">Noisy <span>战争</span></h2>
+                                        
+                                    </figcaption>			
+                                </figure>
+                                
+                            </div>
+                        </div>
+                    <div class="grid" style="margin-left:200px;padding-top:40px;">
+                        <h1 class="fresh_font" style="margin-left:100px;font-size:35px;display:inline;">请选择你的爱好</h1>
+                        <div style="display:inline;margin-left:100px;">
+                            <button class="button type1" style="font-family: myFont_3 ;position:absolute;left:760px;top:20px; height:45px; width:103px; font-size:18px;" 
+                                onclick="window.open('find.html','_self')">
+                                    返  回
+                            </button>
+                        </div>
+                    </div>
+                        
+            </div>
+        </div>
+    </div>
+    <script>
+        var h1=$("#hobby_1");
+        var h2=$("#hobby_2");
+        var h3=$("#hobby_3");
+        var h4=$("#hobby_4");
+        var h5=$("#hobby_5");
+        var h6=$("#hobby_6");
+        var h7=$("#hobby_7");
+        var h8=$("#hobby_8");
+        var h9=$("#hobby_9");
+        var h1_num = 1 ;
+        var h2_num = 1 ;
+        var h3_num = 1 ;
+        var h4_num = 1 ;
+        var h5_num = 1 ;
+        var h6_num = 1 ;
+        var h7_num = 1 ;
+        var h8_num = 1 ;
+        var h9_num = 1 ;
+        h1.click(
+            function (){
+                if(h1_num == 1){
+                    h1_num = 0 ;
+                    h1.addClass("effect-terry-visited");
+                }else{
+                    h1_num = 1 ;
+                    h1.removeClass("effect-terry-visited");
+                }
+            }
+        )
+        h2.click(
+            function (){
+                if(h2_num == 1){
+                    h2_num = 0 ;
+                    h2.addClass("effect-terry-visited");
+                }else{
+                    h2_num = 1 ;
+                    h2.removeClass("effect-terry-visited");
+                }
+            }
+        )
+        h3.click(
+            function (){
+                if(h3_num == 1){
+                    h3_num = 0 ;
+                    h3.addClass("effect-terry-visited");
+                }else{
+                    h3_num = 1 ;
+                    h3.removeClass("effect-terry-visited");
+                }
+            }
+        )
+        h4.click(
+            function (){
+                if(h4_num == 1){
+                    h4_num = 0 ;
+                    h4.addClass("effect-terry-visited");
+                }else{
+                    h4_num = 1 ;
+                    h4.removeClass("effect-terry-visited");
+                }
+            }
+        )
+        h5.click(
+            function (){
+                if(h5_num == 1){
+                    h5_num = 0 ;
+                    h5.addClass("effect-terry-visited");
+                }else{
+                    h5_num = 1 ;
+                    h5.removeClass("effect-terry-visited");
+                }
+            }
+        )
+        h6.click(
+            function (){
+                if(h6_num == 1){
+                    h6_num = 0 ;
+                    h6.addClass("effect-terry-visited");
+                }else{
+                    h6_num = 1 ;
+                    h6.removeClass("effect-terry-visited");
+                }
+            }
+        )
+        h7.click(
+            function (){
+                if(h7_num == 1){
+                    h7_num = 0 ;
+                    h7.addClass("effect-terry-visited");
+                }else{
+                    h7_num = 1 ;
+                    h7.removeClass("effect-terry-visited");
+                }
+            }
+        )
+        h8.click(
+            function (){
+                if(h8_num == 1){
+                    h8_num = 0 ;
+                    h8.addClass("effect-terry-visited");
+                }else{
+                    h8_num = 1 ;
+                    h8.removeClass("effect-terry-visited");
+                }
+            }
+        )
+        h9.click(
+            function (){
+                if(h9_num == 1){
+                    h9_num = 0 ;
+                    h9.addClass("effect-terry-visited");
+                }else{
+                    h9_num = 1 ;
+                    h9.removeClass("effect-terry-visited");
+                }
+            }
+        )
+    </script>  
+       
+   
+    <div style="display:none" > this is hidden here , enjoy it dude .</div>
+</BODY></HTML>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>使用脚本元素</title>
+
+
+
+<script type="text/javascript" async="true">
+var server = require("./test");
+　function Btn_Click(){ 
+　 var strTxt=document.getElementById("txtContent").value;
+　 var strDiv=document.getElementById("divShow");
+　　strDiv.innerHTML=strTxt;
+
+
+    
+var sentense = strTxt ;
+  fs.writeFile('input.txt', sentense,{flag:'a'},  function(err) {
+    if (err) {
+        return console.error(err);
+    }
+
+    fs.readFile('input.txt', function (err, data) {
+        if (err) {
+          return console.error(err);
+        }
+        console.log("" + data.toString());
+    });
+  });
+　}
+
+</script>
+
+</head>
+<body>
+
+<input type="text" id="txtContent" 
+　　　 class="inputtxt" />
+<input type="button" value="单击我试试" 
+　　　 class="inputbtn" onClick="Btn_Click();">
+
+<div id="divShow" class="divShow"></div>
+</body>
+</html>
